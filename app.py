@@ -39,6 +39,7 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     r = '抱歉,天業沒有教我回復這個問題'
+    
     if msg in [hi, Hi, 嗨]:
         r = '嗨'
     elif msg == '你吃飯了嗎':
@@ -46,11 +47,9 @@ def handle_message(event):
     elif '劉士華' in msg:
         r = '劉士華背完將進酒了嗎?'
     elif '設計者' in msg:
-         r = '天業是我的設計者!'
+        r = '天業是我的設計者!'
     #elif [設計者, 天業, 誰設計] in msg:
        
-
-
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text= r))
