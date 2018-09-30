@@ -48,8 +48,6 @@ def handle_message(event):
         r = '劉士華背完將進酒了嗎?'
     elif '設計者' in msg:
         r = '天業是我的設計者!'
-    #elif [設計者, 天業, 誰設計] in msg:
-       
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text= r))
